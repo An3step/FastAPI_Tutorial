@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="/static/game_styles.css">
+    <script src="/static/game_javascript.js"></script>
+</head>
+<body>
+<h2>Cryptonamicon</h2>
+
+<table id="guesses">
+</table>
+
+<span id="status"></span>
+
+<hr>
+
+<div>
+{% for letter in word %}<input type=text name="guess">{% endfor %}
+<input type=hidden id="word" value="{{word}}">
+<br><br>
+<input type=submit onclick="post_guess()">
+</div>
+
+</body>
